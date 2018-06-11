@@ -31,7 +31,7 @@ public class HumanController {
         humanService.addHuman(human);
        return mapper.humanToHumanDTO(human);
     }
-    //todo need fix this implementation because this method save new model and not update
+
     @RequestMapping(method = RequestMethod.PUT, value = "/human/{id}")
     @ResponseStatus(value = HttpStatus.ACCEPTED)
     public HumanDTO updateHuman(@RequestBody HumanDTO humanDTO, @PathVariable String id) {
